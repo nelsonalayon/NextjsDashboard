@@ -103,7 +103,7 @@ async function seedRevenue() {
 
 export async function GET() {
   return Response.json({
-    message:""
+    message:"Database seeded successfully"
       
   });
   try {
