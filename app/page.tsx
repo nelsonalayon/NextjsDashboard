@@ -4,6 +4,24 @@ import Link from 'next/link';
 import {lusitana} from './ui/fonts';
 import Image from 'next/image';
 
+// Componente Card
+function Card() {
+  return (
+    <div className="rounded-lg bg-white shadow-md p-6 border border-gray-200">
+      <h3 className="text-2xl font-bold text-gray-800 mb-2">
+        Card Component
+      </h3>
+      <p className="text-gray-600 mb-4">
+        Este es un componente tipo card agregado al final de la página. 
+        Puedes personalizarlo con tu contenido.
+      </p>
+      <button className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition-colors">
+        Ver más
+      </button>
+    </div>
+  );
+}
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
@@ -12,7 +30,7 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal ${lusitana.className}`}>
+          <p className={\`text-xl text-gray-800 md:text-3xl md:leading-normal ${lusitana.className}\`}>
             <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
               Next.js Learn Course
@@ -43,6 +61,11 @@ export default function Page() {
             className="block md:hidden"
           />
         </div>
+      </div>
+      
+      {/* Card Component al final de la página */}
+      <div className="mt-8">
+        <Card />
       </div>
     </main>
   );
